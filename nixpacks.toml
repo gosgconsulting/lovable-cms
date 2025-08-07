@@ -1,0 +1,23 @@
+providers = ["node"]
+
+[phases.setup]
+nixPkgs = [
+  "nodejs_22",
+]
+
+[phases.install]
+cmds = [
+  "corepack enable",
+  "yarn set version 1.22.19",
+  "yarn install --frozen-lockfile",
+]
+
+[phases.build]
+cmds = [
+  "yarn workspace @measured/puck build",
+  "yarn workspace demo build",
+]
+
+[start]
+cmd = "yarn workspace demo start -p $PORT"
+
