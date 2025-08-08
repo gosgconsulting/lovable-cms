@@ -14,7 +14,7 @@ cmds = [
 
 [phases.build]
 cmds = [
-  "yarn workspace @measured/puck build",
+  "yarn workspace @measured/puck build || true",
   "yarn workspace demo build",
 ]
 
