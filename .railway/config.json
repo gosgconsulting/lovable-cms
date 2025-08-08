@@ -1,0 +1,17 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "services": [
+    {
+      "name": "cms-demo",
+      "rootDir": ".",
+      "installCommand": "yarn install --frozen-lockfile",
+      "buildCommand": "yarn workspace @measured/puck build && yarn workspace demo build",
+      "startCommand": "yarn workspace demo start -p $PORT",
+      "envs": {
+        "NODE_ENV": "production",
+        "PUPPETEER_SKIP_DOWNLOAD": "true"
+      }
+    }
+  ]
+}
+

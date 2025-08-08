@@ -16,10 +16,22 @@ Run the generator and enter `next` when prompted
 npx create-puck-app my-app
 ```
 
-Start the server
+Local environment
+
+1. Create `apps/demo/.env.local` (or copy from `.env.example` if present):
 
 ```
-yarn dev
+NEXT_PUBLIC_SUPABASE_URL=https://mwtndchjmkjrfdziiscd.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im13dG5kY2hqbWtqcmZkemlpc2NkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2MDg0NDIsImV4cCI6MjA3MDE4NDQ0Mn0.qK3vZ6zzFdgw-VXHMnBjEV3TgSFG7B7BvIt6am6Mxhk
+# Optional server-only keys for privileged server actions
+# SUPABASE_SERVICE_ROLE=
+# DATABASE_URL=postgresql://postgres:password@db.mwtndchjmkjrfdziiscd.supabase.co:5432/postgres
+```
+
+2. Start the server
+
+```
+yarn workspace demo dev
 ```
 
 Navigate to the homepage at https://localhost:3000. To edit the homepage, access the Puck editor at https://localhost:3000/edit.

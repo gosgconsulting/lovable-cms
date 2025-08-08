@@ -1,0 +1,13 @@
+# Copy this file to apps/demo/.env.local (do not commit secrets)
+
+NEXT_PUBLIC_SUPABASE_URL=https://mwtndchjmkjrfdziiscd.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im13dG5kY2hqbWtqcmZkemlpc2NkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2MDg0NDIsImV4cCI6MjA3MDE4NDQ0Mn0.qK3vZ6zzFdgw-VXHMnBjEV3TgSFG7B7BvIt6am6Mxhk
+
+# Optional server-only keys for privileged server actions
+# NEVER expose in the browser; set only for server
+SUPABASE_SERVICE_ROLE=
+
+# Optional: if using direct Postgres access/tools
+DATABASE_URL=postgresql://postgres:password@db.mwtndchjmkjrfdziiscd.supabase.co:5432/postgres
+
+

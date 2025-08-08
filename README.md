@@ -86,7 +86,7 @@ export function Page() {
 
 ## Recipes
 
-Use `create-puck-app` to quickly spin up a a pre-configured app based on our provided [recipes](https://github.com/puckeditor/puck/tree/main/recipes):
+Use `create-puck-app` to quickly spin up a a pre-configured app based on our provided [recipes](https://github.com/puckeditor/puck/tree/main/recipes). For this monorepo, the demo app lives in `apps/demo`:
 
 ```sh
 npx create-puck-app my-app
@@ -97,6 +97,17 @@ Available recipes include:
 - [**next**](https://github.com/puckeditor/puck/tree/main/recipes/next): Next.js example, using App Router and static page generation
 - [**remix**](https://github.com/puckeditor/puck/tree/main/recipes/remix): Remix Run v2 example, using dynamic routes at root-level
 - [**react-router**](https://github.com/puckeditor/puck/tree/main/recipes/react-router): React Router v7 app example, using dynamic routes to create pages at any level
+
+### Local development for this repo
+
+- Copy env for the demo app:
+  - Create `apps/demo/.env.local` with the browser-safe Supabase vars. Server-only secrets (e.g. `SUPABASE_SERVICE_ROLE`, `DATABASE_URL`) should be set in Railway or only in your local `.env.local` and must never be committed.
+
+- Start the demo app:
+
+```sh
+yarn workspace demo dev
+```
 
 ## Community
 
