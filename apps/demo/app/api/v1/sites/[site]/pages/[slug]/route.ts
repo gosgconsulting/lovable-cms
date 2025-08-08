@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase-client'
+import { envPublic } from '@/app/../env'
 import { initialData } from '@/app/../config/initial-data'
 
 type Params = { params: Promise<{ site: string; slug: string }> }
